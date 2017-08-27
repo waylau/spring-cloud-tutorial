@@ -36,7 +36,7 @@
 * [微服务的集中化配置](docs/centralized-configuration/centralized-configuration.md)
     * [为什么需要集中化配置](docs/centralized-configuration/why.md)
     * [集中化配置的实现原理](docs/centralized-configuration/principle.md)
-    * [如何集成 Config](docs/centralized-configuration/config.md)
+    * [如何集成 Spring Cloud Config](docs/centralized-configuration/config.md)
     * [实现微服务的集中化配置](docs/centralized-configuration/config-in-action.md)
 * [微服务的高级主题——自动扩展](docs/auto-scale/auto-scale.md)
     * [什么是自动扩展](docs/auto-scale/what.md)
@@ -48,6 +48,6 @@
     * [熔断的意义](docs/circuit-breaker/circuit-breaker-meaning.md)
     * [熔断与降级的区别](docs/circuit-breaker/circuit-breaker-and-service-downgrade.md)
     * [如何集成 Hystrix](docs/circuit-breaker/hystrix.md)
-    * [实现微服务的机制](docs/circuit-breaker/hystrix-in-action.md)
+    * [实现微服务的熔断机制](docs/circuit-breaker/hystrix-in-action.md)
 * [参考资料](docs/references.md)
 
