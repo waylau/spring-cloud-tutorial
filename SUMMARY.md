@@ -1,9 +1,8 @@
 # Summary
 
-* [Introduction](README.md)
 * [Spring Cloud 介绍](docs/spring-cloud/spring-cloud.md)
-    * [Spring Cloud 简介](docs/spring-cloud/spring-cloud-overview.md)
-    * [Spring Cloud 配置详解](docs/spring-cloud/spring-cloud-config.md)
+    * [Spring Cloud 简介](docs/spring-cloud/spring-cloud-overview.md)（完）
+    * [Spring Cloud 入门配置](docs/spring-cloud/spring-cloud-config.md)（完）
     * [Spring Cloud 的子项目介绍](docs/spring-cloud/spring-cloud-projects.md)
     * [Spring Cloud 与 Spring Boot 的关系](docs/spring-cloud/spring-cloud-and-boot.md)
 * [微服务 与 Spring Boot](docs/msa-boot/msa-boot.md)

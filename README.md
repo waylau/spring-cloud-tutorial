@@ -6,6 +6,8 @@ Spring Cloud Tutorial takes you to learn Spring Cloud step by step with a large 
 Let's [READ](SUMMARY.md)!
 
 Spring Cloud Tutorial 是一本关于 Spring Cloud 学习的开源书。利用业余时间写了本书，图文并茂，用大量实例带你一步一步走进 Spring Cloud 的世界。如有疏漏欢迎指正，欢迎提问。感谢您的参与！
+
+**注**：Spring Cloud 基于 Spring Boot 来进行构建服务。有关 Spring Boot 的内容，可以参阅笔者所著的《Spring Boot 教程》（<https://github.com/waylau/spring-boot-tutorial>）
  
 ## Get Started 如何开始阅读
 
