@@ -3,8 +3,8 @@
 * [Spring Cloud 介绍](docs/spring-cloud/spring-cloud.md)
     * [Spring Cloud 简介](docs/spring-cloud/spring-cloud-overview.md)（完）
     * [Spring Cloud 入门配置](docs/spring-cloud/spring-cloud-config.md)（完）
-    * [Spring Cloud 的子项目介绍](docs/spring-cloud/spring-cloud-projects.md)
-    * [Spring Cloud 与 Spring Boot 的关系](docs/spring-cloud/spring-cloud-and-boot.md)
+    * [Spring Cloud 的子项目介绍](docs/spring-cloud/spring-cloud-projects.md)（完）
+    * [Spring Cloud 与 Spring Boot 的关系](docs/spring-cloud/spring-cloud-and-boot.md)（完）
 * [微服务 与 Spring Boot](docs/msa-boot/msa-boot.md)
     * [微服务架构概述](docs/msa-boot/msa-boot-overview.md)
     * [微服务  API 设计原则](docs/msa-boot/msa-boot-api.md)
