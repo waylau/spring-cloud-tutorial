@@ -121,6 +121,10 @@
 
 
 
+## 访问API
+
+* <http://localhost:8080/weather/cityId/101280601>
+* <http://localhost:8080/weather/cityName/惠州>
 
 ## 参考
 

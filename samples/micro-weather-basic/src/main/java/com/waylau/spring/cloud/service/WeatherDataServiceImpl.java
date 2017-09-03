@@ -3,11 +3,14 @@
  */
 package com.waylau.spring.cloud.service;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.waylau.spring.cloud.vo.WeatherResponse;
 
 /**
@@ -25,16 +28,33 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 	@Override
 	public WeatherResponse getDataByCityId(String cityId) {
 		String uri = "http://wthrcdn.etouch.cn/weather_mini?citykey=" + cityId;
- 
-		ResponseEntity<WeatherResponse> response = restTemplate.getForEntity(uri, WeatherResponse.class);
-		//ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
-		return null;
+		return this.doGetWeatherData(uri);
 	}
 
 	@Override
 	public WeatherResponse getDataByCityName(String cityName) {
-		// TODO Auto-generated method stub
-		return null;
+		String uri = "http://wthrcdn.etouch.cn/weather_mini?city=" + cityName;
+		return this.doGetWeatherData(uri);
+	}
+	
+	private WeatherResponse doGetWeatherData(String uri) {
+		ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
+		String strBody = null;
+		
+		if (response.getStatusCodeValue() == 200) {
+			strBody = response.getBody();
+		}
+		
+		ObjectMapper mapper = new ObjectMapper();  
+		WeatherResponse weather = null;
+		
+		try {
+			weather = mapper.readValue(strBody, WeatherResponse.class);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}  
+		
+		return weather;
 	}
 
 }
