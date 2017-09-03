@@ -6,14 +6,14 @@
 ## 开发环境
 
 * Gradle 4.0
-* Spring Boot 2.0.0.M2
+* Spring Boot 1.5.6
 
 ## 数据来源
 
 理论上，天气的数据是天气预报的实现基础。本应用与实际的天气数据无关，理论上，可以兼容多种数据来源。但为求简单，我们在网上找了一个免费、可用的天气数据接口。
 
 * 天气数据来源为中国天气网 <http://www.weather.com.cn/>。
-* 城市ID列表。每个城市都有一个唯一的ID作为标识。见 <http://cj.weather.com.cn/support/Detail.aspx?id=51837fba1b35fe0f8411b6df> 。
+* 城市ID列表。每个城市都有一个唯一的ID作为标识。见 <http://cj.weather.com.cn/support/Detail.aspx?id=51837fba1b35fe0f8411b6df> 或者 <http://mobile.weather.com.cn/js/citylist.xml>。
 
 天气调用，接口示例，我们以“深圳”城市为例，访问：
 
@@ -117,3 +117,13 @@
 
 
 创建`com.waylau.spring.cloud.domain`包，用于存储实体。创建天气信息实体 WeatherInfo
+
+
+
+
+
+## 参考
+
+* http://blog.csdn.net/Sugar_tea/article/details/45224109
+* http://blog.csdn.net/chenchunlin526/article/details/71439039
+* https://stackoverflow.com/questions/34415144/cannot-parse-gzip-encoded-response-with-resttemplate-from-spring-web

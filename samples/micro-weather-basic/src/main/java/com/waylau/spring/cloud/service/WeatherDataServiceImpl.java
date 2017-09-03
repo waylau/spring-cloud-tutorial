@@ -25,8 +25,9 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 	@Override
 	public WeatherResponse getDataByCityId(String cityId) {
 		String uri = "http://wthrcdn.etouch.cn/weather_mini?citykey=" + cityId;
+ 
 		ResponseEntity<WeatherResponse> response = restTemplate.getForEntity(uri, WeatherResponse.class);
-		
+		//ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
 		return null;
 	}
 
