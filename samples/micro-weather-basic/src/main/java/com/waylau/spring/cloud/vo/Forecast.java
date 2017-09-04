@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @since 1.0.0 2017年9月2日
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
-public class ForecastVO implements Serializable {
+public class Forecast implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -67,7 +67,7 @@ public class ForecastVO implements Serializable {
 		this.type = type;
 	}
 
-	public ForecastVO() {
+	public Forecast() {
 
 	}
  

@@ -12,14 +12,14 @@ public class WeatherResponse implements Serializable {
 	 
     private static final long serialVersionUID = 1L;
     
-    private WeatherData data; // 消息数据
+    private Weather data; // 消息数据
     private String status; // 消息状态
     private String desc; // 消息描述
     
-	public WeatherData getData() {
+	public Weather getData() {
 		return data;
 	}
-	public void setData(WeatherData data) {
+	public void setData(Weather data) {
 		this.data = data;
 	}
 	public String getStatus() {

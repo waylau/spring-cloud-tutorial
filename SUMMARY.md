@@ -9,7 +9,7 @@
     * [微服务架构概述](docs/msa-boot/msa-boot-overview.md)
     * [微服务  API 设计原则](docs/msa-boot/msa-boot-api.md)
     * [微服务存储设计原则](docs/msa-boot/msa-boot-store.md)
-    * [基于 Spring Boot 的一个微服务实现](docs/msa-boot/first-api.md)（ing...）
+    * [第一个微服务实现——天气预报服务](docs/msa-boot/first-api.md)（ing...）（完）
 * [微服务的注册与发现](docs/register-discover/register-discover.md)
     * [服务发现的意义](docs/register-discover/discover-meaning.md)
     * [如何集成Eureka](docs/register-discover/eureka.md)

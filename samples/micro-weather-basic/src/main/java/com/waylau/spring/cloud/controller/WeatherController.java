@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.waylau.spring.cloud.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +10,10 @@ import com.waylau.spring.cloud.service.WeatherDataService;
 import com.waylau.spring.cloud.vo.WeatherResponse;
 
 /**
- * @author Administrator
- *
+ * 天气控制器.
+ * 
+ * @since 1.0.0 2017年9月2日
+ * @author <a href="https://waylau.com">Way Lau</a> 
  */
 @RestController
 @RequestMapping("/weather")	

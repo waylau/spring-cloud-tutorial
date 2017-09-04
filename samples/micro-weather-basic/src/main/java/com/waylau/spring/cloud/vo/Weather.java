@@ -4,12 +4,12 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 天气信息实体.
+ * 天气信息.
  * 
  * @since 1.0.0 2017年4月29日
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
-public class WeatherData implements Serializable {
+public class Weather implements Serializable {
 	 
 	private static final long serialVersionUID = 1L;
 		
@@ -17,8 +17,8 @@ public class WeatherData implements Serializable {
     private String aqi;
     private String wendu;
     private String ganmao;
-	private YesterdayVO yesterday;
-    private List<ForecastVO> forecast;
+	private Yesterday yesterday;
+    private List<Forecast> forecast;
  
 	public String getCity() {
 		return city;
@@ -44,16 +44,16 @@ public class WeatherData implements Serializable {
 	public void setGanmao(String ganmao) {
 		this.ganmao = ganmao;
 	}
-    public YesterdayVO getYesterday() {
+    public Yesterday getYesterday() {
 		return yesterday;
 	}
-	public void setYesterday(YesterdayVO yesterday) {
+	public void setYesterday(Yesterday yesterday) {
 		this.yesterday = yesterday;
 	}
-	public List<ForecastVO> getForecast() {
+	public List<Forecast> getForecast() {
 		return forecast;
 	}
-	public void setForecast(List<ForecastVO> forecast) {
+	public void setForecast(List<Forecast> forecast) {
 		this.forecast = forecast;
 	}
 }

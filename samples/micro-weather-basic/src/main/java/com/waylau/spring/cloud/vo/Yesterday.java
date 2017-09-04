@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @since 1.0.0 2017年9月2日
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
-public class YesterdayVO implements Serializable {
+public class Yesterday implements Serializable {
  
 	private static final long serialVersionUID = 1L;
 	
@@ -19,7 +19,7 @@ public class YesterdayVO implements Serializable {
     private String fl;
     private String type;
 
-	public YesterdayVO() {
+	public Yesterday() {
 
 	}
 	

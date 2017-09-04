@@ -24,16 +24,18 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 	
     @Autowired
     private RestTemplate restTemplate;
+
+    private final String WEATHER_API="http://wthrcdn.etouch.cn/weather_mini";
     
 	@Override
 	public WeatherResponse getDataByCityId(String cityId) {
-		String uri = "http://wthrcdn.etouch.cn/weather_mini?citykey=" + cityId;
+		String uri = WEATHER_API + "?citykey=" + cityId;
 		return this.doGetWeatherData(uri);
 	}
 
 	@Override
 	public WeatherResponse getDataByCityName(String cityName) {
-		String uri = "http://wthrcdn.etouch.cn/weather_mini?city=" + cityName;
+		String uri =  WEATHER_API + "?city=" + cityName;
 		return this.doGetWeatherData(uri);
 	}
 	
