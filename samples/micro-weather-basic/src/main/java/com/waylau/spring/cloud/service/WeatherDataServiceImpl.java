@@ -17,16 +17,16 @@ import com.waylau.spring.cloud.vo.WeatherResponse;
  * 天气数据服务.
  * 
  * @since 1.0.0 2017年9月2日
- * @author <a href="https://waylau.com">Way Lau</a> 
+ * @author <a href="https://waylau.com">Way Lau</a>
  */
 @Service
 public class WeatherDataServiceImpl implements WeatherDataService {
-	
-    @Autowired
-    private RestTemplate restTemplate;
 
-    private final String WEATHER_API="http://wthrcdn.etouch.cn/weather_mini";
-    
+	@Autowired
+	private RestTemplate restTemplate;
+
+	private final String WEATHER_API = "http://wthrcdn.etouch.cn/weather_mini";
+
 	@Override
 	public WeatherResponse getDataByCityId(String cityId) {
 		String uri = WEATHER_API + "?citykey=" + cityId;
@@ -35,27 +35,27 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 
 	@Override
 	public WeatherResponse getDataByCityName(String cityName) {
-		String uri =  WEATHER_API + "?city=" + cityName;
+		String uri = WEATHER_API + "?city=" + cityName;
 		return this.doGetWeatherData(uri);
 	}
-	
+
 	private WeatherResponse doGetWeatherData(String uri) {
 		ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
 		String strBody = null;
-		
+
 		if (response.getStatusCodeValue() == 200) {
 			strBody = response.getBody();
 		}
-		
-		ObjectMapper mapper = new ObjectMapper();  
+
+		ObjectMapper mapper = new ObjectMapper();
 		WeatherResponse weather = null;
-		
+
 		try {
 			weather = mapper.readValue(strBody, WeatherResponse.class);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}  
-		
+		}
+
 		return weather;
 	}
 

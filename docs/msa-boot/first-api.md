@@ -1,7 +1,7 @@
 # 第一个微服务实现——天气预报服务
 
 
-本章节，我们将基于 Spring Boot 技术来实现我们的第一个微服务天气预报应用——micro-weather。micro-weather 的作用是实现天气预报功能，可以根据不同的城市，查询该城市的实时天气情况。
+本章节，我们将基于 Spring Boot 技术来实现我们的第一个微服务天气预报应用——micro-weather-basic。micro-weather-basic 的作用是实现简单的天气预报功能，可以根据不同的城市，查询该城市的实时天气情况。
 
 ## 开发环境
 
@@ -13,15 +13,12 @@
 
 理论上，天气的数据是天气预报的实现基础。本应用与实际的天气数据无关，理论上，可以兼容多种数据来源。但为求简单，我们在网上找了一个免费、可用的天气数据接口。
 
-* 天气数据来源为中华万年历。
+* 天气数据来源为中华万年历。例如：
+	* 通过城市名字获得天气数据 ：<http://wthrcdn.etouch.cn/weather_mini?city=深圳>
+	* 通过城市id获得天气数据：<http://wthrcdn.etouch.cn/weather_mini?citykey=101280601>
 * 城市ID列表。每个城市都有一个唯一的ID作为标识。见 <http://cj.weather.com.cn/support/Detail.aspx?id=51837fba1b35fe0f8411b6df> 或者 <http://mobile.weather.com.cn/js/citylist.xml>。
 
-天气调用，接口示例，我们以“深圳”城市为例，访问：
-
-* 通过城市名字获得天气数据 ：<http://wthrcdn.etouch.cn/weather_mini?city=深圳>
-* 通过城市id获得天气数据：<http://wthrcdn.etouch.cn/weather_mini?citykey=101280601>
-
-可用看到如下天气数据返回。
+调用天气服务接口示例，我们以“深圳”城市为例，可用看到如下天气数据返回。
 
 ```json
 {
@@ -128,10 +125,10 @@ dependencies {
  	//...
 }
 ```
-## 创建天气信息实体 WeatherInfo
+## 创建天气信息相关的值对象
 
 
-创建`com.waylau.spring.cloud.vo`包，用于相关值对象。创建天气信息实体 Weather
+创建`com.waylau.spring.cloud.vo`包，用于相关值对象。创建天气信息类 Weather
 
 
 ```java
@@ -329,33 +326,39 @@ WeatherResponse 作为整个消息的返回对象
 
 ```java
 public class WeatherResponse implements Serializable {
-	 
-    private static final long serialVersionUID = 1L;
-    
-    private Weather data; // 消息数据
-    private String status; // 消息状态
-    private String desc; // 消息描述
-    
+
+	private static final long serialVersionUID = 1L;
+
+	private Weather data; // 消息数据
+	private String status; // 消息状态
+	private String desc; // 消息描述
+
 	public Weather getData() {
 		return data;
 	}
+
 	public void setData(Weather data) {
 		this.data = data;
 	}
+
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
 	public String getDesc() {
 		return desc;
 	}
+
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-    
+
 }
+
 ```
 
 ## 服务接口及实现
@@ -386,12 +389,12 @@ public interface WeatherDataService {
 ```java
 @Service
 public class WeatherDataServiceImpl implements WeatherDataService {
-	
-    @Autowired
-    private RestTemplate restTemplate;
 
-    private final String WEATHER_API="http://wthrcdn.etouch.cn/weather_mini";
-    
+	@Autowired
+	private RestTemplate restTemplate;
+
+	private final String WEATHER_API = "http://wthrcdn.etouch.cn/weather_mini";
+
 	@Override
 	public WeatherResponse getDataByCityId(String cityId) {
 		String uri = WEATHER_API + "?citykey=" + cityId;
@@ -400,27 +403,27 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 
 	@Override
 	public WeatherResponse getDataByCityName(String cityName) {
-		String uri =  WEATHER_API + "?city=" + cityName;
+		String uri = WEATHER_API + "?city=" + cityName;
 		return this.doGetWeatherData(uri);
 	}
-	
+
 	private WeatherResponse doGetWeatherData(String uri) {
 		ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
 		String strBody = null;
-		
+
 		if (response.getStatusCodeValue() == 200) {
 			strBody = response.getBody();
 		}
-		
-		ObjectMapper mapper = new ObjectMapper();  
+
+		ObjectMapper mapper = new ObjectMapper();
 		WeatherResponse weather = null;
-		
+
 		try {
 			weather = mapper.readValue(strBody, WeatherResponse.class);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}  
-		
+		}
+
 		return weather;
 	}
 
@@ -487,3 +490,6 @@ public class RestConfiguration {
 
 ![weather-data](../../images/msa-boot/weather-data.jpg)
 
+## 源码
+
+本章节的源码，在`micro-weather-basic`目录下。
