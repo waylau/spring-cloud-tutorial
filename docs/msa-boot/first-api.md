@@ -459,7 +459,7 @@ public class WeatherController {
 
 `@RestController`自动会将返回的数据，序列化成 JSON数据格式。
 
-### 配置类
+## 配置类
 
 RestConfiguration 是 RestTemplate 的配置类。
 
