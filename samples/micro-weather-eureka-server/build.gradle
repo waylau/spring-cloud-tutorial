@@ -1,0 +1,46 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.0.M3'
+	}
+	repositories {
+		//mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+		maven { url "https://repo.spring.io/libs-milestone" }
+		maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: "io.spring.dependency-management"
+//apply plugin: 'spring-boot'
+
+version = '1.0.0'
+sourceCompatibility = 1.8
+
+repositories {
+	//mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "https://repo.spring.io/libs-milestone" }
+	maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+}
+
+
+dependencyManagement {
+  imports {
+    mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Finchley.M2'
+  }
+}
+
+dependencies {
+	// 添加  Eureka Server 依赖
+	compile ('org.springframework.cloud:spring-cloud-starter-eureka-server')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
