@@ -13,8 +13,8 @@
     * [提升微服务的并发访问能力](docs/msa-boot/msa-boot-redis.md) （完）
 * [微服务的注册与发现](docs/register-discover/register-discover.md)
     * [服务发现的意义](docs/register-discover/discover-meaning.md)
-    * [如何集成Eureka](docs/register-discover/eureka.md)
-    * [实现服务的注册与发现](docs/register-discover/eureka-in-action.md)
+    * [如何集成Eureka](docs/register-discover/eureka.md)（完）
+    * [实现服务的注册与发现](docs/register-discover/eureka-in-action.md)（完）
 * [微服务的消费](docs/comsumer/comsumer.md)
     * [微服务的消费模式](docs/comsumer/comsumer-patterns.md)
     * [常见微服务的消费者](docs/comsumer/comsumer-cases.md)
