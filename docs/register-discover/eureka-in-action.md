@@ -56,3 +56,7 @@ eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/
 分别在 8081 和 8082 上启动了客户端示例。可以在 Eureka Server 上看到这两个实体的信息。
 
 ![eurake-client](../../images/register-discover/eurake-client.jpg)
+
+## 源码
+
+本章节源码，见`micro-weather-eureka-server` 和 `micro-weather-eureka-client` 。
