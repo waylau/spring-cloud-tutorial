@@ -23,8 +23,8 @@
 * [API 网关](docs/api-gateway/api-gateway.md)
     * [API 网关的意义](docs/api-gateway/api-gateway-meaning.md)
     * [常见 API 网关的实现方式](docs/api-gateway/api-gateway-patterns.md)
-    * [如何集成Zuul](docs/api-gateway/zuul.md)
-    * [实现 API 网关](docs/api-gateway/api-gateway-in-action.md)
+    * [如何集成Zuul](docs/api-gateway/zuul.md)（完）
+    * [实现 API 网关](docs/api-gateway/api-gateway-in-action.md)（完）
 * [微服务的部署与发布](docs/deploy-publish/deploy-publish.md)
     * [部署微服务将面临的挑战](docs/deploy-publish/problems.md)
     * [持续交付与持续部署微服务](docs/deploy-publish/deploy-publish-msa.md)
