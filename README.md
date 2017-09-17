@@ -18,6 +18,8 @@ Spring Cloud Tutorial 是一本关于 Spring Cloud 学习的开源书。利用�
 * Spring Boot Data Redis Starter 2.0.0.M3
 * Redis 3.2.100
 * Spring Cloud Netflix Eureka Server Finchley.M2
+* Spring Cloud Netflix Eureka Client Finchley.M2
+* Spring Cloud Starter OpenFeig Finchley.M2
  
 ## Get Started 如何开始阅读
 
@@ -25,6 +27,7 @@ Spring Cloud Tutorial 是一本关于 Spring Cloud 学习的开源书。利用�
 
 * <https://github.com/waylau/spring-cloud-tutorial/> 的 [SUMMARY.md](SUMMARY.md)（源码）
 * <http://waylau.gitbooks.io/spring-cloud-tutorial/> 点击 Read 按钮（同步更新，国内访问速度一般）
+* <http://git.oschina.net/waylau/spring-cloud-tutorial> 的 [SUMMARY.md](SUMMARY.md)（码云，手动同步，有所延时）
 
 ## Code 源码
 

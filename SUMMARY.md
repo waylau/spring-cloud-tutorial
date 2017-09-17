@@ -17,7 +17,7 @@
     * [实现服务的注册与发现](docs/register-discover/eureka-in-action.md)（完）
 * [微服务的消费](docs/comsumer/comsumer.md)
     * [微服务的消费模式](docs/comsumer/comsumer-patterns.md)
-    * [常见微服务的消费者](docs/comsumer/comsumer-cases.md)
+    * [常见微服务的消费者](docs/comsumer/comsumer-cases.md)（完）
     * [实现服务的消费者](docs/comsumer/comsumer-in-action.md)
     * [实现服务的负载均衡及高可用](docs/comsumer/ribbon-in-action.md)
 * [API 网关](docs/api-gateway/api-gateway.md)

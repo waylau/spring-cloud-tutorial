@@ -32,7 +32,7 @@ dependencies {
 @RestController
 public class Application {
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String home() {
         return "Hello world";
     }
@@ -53,7 +53,15 @@ eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/
 
 ## 运行
 
-分别在 8081 和 8082 上启动了客户端示例。可以在 Eureka Server 上看到这两个实体的信息。
+分别在 8081 和 8082 上启动了客户端示例。
+
+```java
+java -jar micro-weather-eureka-client-1.0.0.jar --server.port=8081
+
+java -jar micro-weather-eureka-client-1.0.0.jar --server.port=8082
+```
+
+可以在 Eureka Server 上看到这两个实体的信息。
 
 ![eurake-client](../../images/register-discover/eurake-client.jpg)
 
