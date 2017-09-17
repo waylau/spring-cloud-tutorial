@@ -2,7 +2,7 @@
 
 本章节，我们将创建一个`micro-weather-feign` 作为服务器的消费者，并演示如何使用 Feign 来消费服务。
 
-在 `micro-weather-eureka-client`  的基础上稍作修改即可
+在 `micro-weather-eureka-client`  的基础上稍作修改即可。
 
 ## 开发环境
 
