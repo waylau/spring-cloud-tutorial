@@ -21,10 +21,7 @@ public class HelloClientTest {
 	
 	@Test
 	public void testHello() {
-		
 		String hello = helloClient.getHello();
-		System.out.println(hello);
-		hello = helloClient.getHello();
 		System.out.println(hello);
 	}
 
