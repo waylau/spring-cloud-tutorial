@@ -20,6 +20,8 @@ Spring Cloud Tutorial 是一本关于 Spring Cloud 学习的开源书。利用�
 * Spring Cloud Netflix Eureka Server Finchley.M2
 * Spring Cloud Netflix Eureka Client Finchley.M2
 * Spring Cloud Starter OpenFeig Finchley.M2
+* Spring Cloud Config Server Finchley.M2
+* Spring Cloud Config Client Finchley.M2
  
 ## Get Started 如何开始阅读
 
