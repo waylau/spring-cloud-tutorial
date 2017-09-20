@@ -36,8 +36,8 @@
 * [微服务的集中化配置](docs/centralized-configuration/centralized-configuration.md)
     * [为什么需要集中化配置](docs/centralized-configuration/why.md)
     * [集中化配置的实现原理](docs/centralized-configuration/principle.md)
-    * [如何集成 Spring Cloud Config](docs/centralized-configuration/config.md)
-    * [实现微服务的集中化配置](docs/centralized-configuration/config-in-action.md)
+    * [如何集成 Spring Cloud Config](docs/centralized-configuration/config.md)（完）
+    * [实现微服务的集中化配置](docs/centralized-configuration/config-in-action.md)（完）
 * [微服务的高级主题——自动扩展](docs/auto-scale/auto-scale.md)
     * [什么是自动扩展](docs/auto-scale/what.md)
     * [自动扩展的意义](docs/auto-scale/auto-scale-meaning.md)
