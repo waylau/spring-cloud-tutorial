@@ -7,7 +7,7 @@
 
 * Gradle 4.0
 * Spring Boot 1.5.6
-* Apache HttpClient 1.5.3
+* Apache HttpClient 4.5.3
 
 ## 数据来源
 

@@ -16,6 +16,7 @@ Spring Cloud Tutorial 是一本关于 Spring Cloud 学习的开源书。利用�
 * Gradle 4.0
 * Spring Boot 2.0.0.M3
 * Spring Boot Data Redis Starter 2.0.0.M3
+* Apache HttpClient 4.5.3
 * Redis 3.2.100
 * Spring Cloud Netflix Eureka Server Finchley.M2
 * Spring Cloud Netflix Eureka Client Finchley.M2
