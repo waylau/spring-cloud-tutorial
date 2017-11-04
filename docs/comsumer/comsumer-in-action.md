@@ -9,7 +9,7 @@
 * Gradle 4.0
 * Spring Boot 2.0.0.M3
 * Spring Cloud Netflix Eureka Client Finchley.M2
-* Spring Cloud Starter OpenFeig Finchley.M2
+* Spring Cloud Starter OpenFeign Finchley.M2
 
 ## 更改配置
 
