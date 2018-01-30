@@ -49,6 +49,14 @@ Spring Cloud Tutorial 是一本关于 Spring Cloud 学习的开源书。利用�
 * 微博：http://weibo.com/waylau521
 * 开源：https://github.com/waylau
 
+## 相关资料
+
+其他与 Spring Cloud 相关的学习资料还有：
+
+* 基于Spring Boot的博客系统实战（视频）：<http://coding.imooc.com/class/125.html>
+* Spring Boot 教程：<https://github.com/waylau/spring-boot-tutorial>
+* 基于Spring Cloud的微服务实战（视频）：<https://coding.imooc.com/class/177.html>
+
 ## 其他书籍
 
 若您对本书不感冒，笔者还写了其他方面的超过一打的书籍（可见<https://waylau.com/books/>），多是开源电子书。
